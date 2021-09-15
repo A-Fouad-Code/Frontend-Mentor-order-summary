@@ -1,0 +1,152 @@
+/* Variables */
+:root {
+  /* Pale blue */
+  --prime-1: hsl(225, 100%, 94%);
+  /* Bright blue */
+  --prime-2: hsl(245, 75%, 52%);
+  /* Very pale blue */
+  --neutral-1: hsl(225, 100%, 98%);
+  /* Desaturated blue */
+  --neutral-2: hsl(224, 23%, 55%);
+  /* Dark blue */
+  --neutral-3: hsl(223, 47%, 23%);
+}
+/* Variables end */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.bg {
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .bg {
+    background-image: url(../images/pattern-background-mobile.svg);
+  }
+  .bg .card {
+    width: 337px;
+  }
+  .bg .card .mid-sec p {
+    margin-left: -20px;
+  }
+  .bg .card .cancel {
+    margin-top: 2.5em;
+  }
+}
+
+.card {
+  width: 370px;
+  height: 80%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+.bg .image img {
+  width: 100%;
+}
+
+.card .main-text {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card .main-text h2 {
+  font-size: 1.3em;
+  font-weight: 900;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: var(--neutral-3);
+}
+
+.card .main-text p {
+  color: var(--neutral-2);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.card .mid-sec {
+  width: 80%;
+  border-radius: 5%;
+  margin: 0 auto;
+  background-color: var(--neutral-1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card .mid-sec .icon {
+  padding: 10px 0;
+}
+
+.card .mid-sec p {
+  color: var(--neutral-3);
+  font-weight: 900;
+  font-size: 15px;
+}
+.card .mid-sec p span {
+  color: var(--neutral-2);
+  font-weight: 500;
+}
+
+.card .mid-sec .change {
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline;
+  color: var(--prime-2);
+}
+.card .mid-sec .change:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--neutral-2);
+}
+
+.card .pay {
+  width: 80%;
+  margin: 20px auto;
+  background-color: var(--prime-2);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5%;
+  box-shadow: 0 15px var(--neutral-1);
+}
+.card .pay:hover {
+  background-color: var(--neutral-2);
+  cursor: pointer;
+}
+
+.card .cancel {
+  text-align: center;
+  color: var(--neutral-2);
+  font-weight: 700;
+  font-size: 16px;
+}
+.card .cancel:hover {
+  color: var(--neutral-3);
+  cursor: pointer;
+}
+
+.attribution {
+  padding: 15px;
+  font-size: 14px;
+}
